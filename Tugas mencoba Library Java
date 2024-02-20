@@ -1,0 +1,51 @@
+1. Library java.awt.font
+
+import java.awt.Font;
+import java.awt.GraphicsEnvironment;
+
+public class ListAvailableFonts {
+
+    public static void main(String[] args) {
+        String[] fontNames = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
+
+        System.out.println("Available Fonts:");
+        for (String fontName : fontNames) {
+            System.out.println(fontName);
+        }
+    }
+}
+![image](https://github.com/Nirotaaa/Praktikkum-Pemrograman-Komputer/assets/148736906/5b72a51a-7f50-45ac-af0a-f2a263fb4bfb)
+
+![image](https://github.com/Nirotaaa/Praktikkum-Pemrograman-Komputer/assets/148736906/134e7b91-2d84-46ab-be77-0ecd3465d699)
+
+
+
+2. Library java.awt.font dengan fungsi return
+
+import java.awt.Font;
+import java.awt.GraphicsEnvironment;
+import java.util.ArrayList;
+import java.util.List;
+
+public class AvailableFontsListerReturn {
+
+    public static List<String> getAvailableFonts() {
+        String[] fontNames = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
+        
+        List<String> availableFonts = new ArrayList<>();
+        for (String fontName : fontNames) {
+            availableFonts.add(fontName);
+        }
+
+        return availableFonts;
+    }
+
+    public static void main(String[] args) {
+        List<String> fontList = getAvailableFonts();
+
+        System.out.println("Available Fonts:");
+        for (String fontName : fontList) {
+            System.out.println(fontName);
+        }
+    }
+}
